@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		local:MvxBind="Text SearchText" />
+	<Mvx.MvxListView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		local:MvxItemTemplate="@layout/places_listitem"
+		local:MvxBind="ItemsSource Places; ItemClick PlaceSelectedCommand" />
+	</LinearLayout>
