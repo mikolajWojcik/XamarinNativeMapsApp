@@ -3493,8 +3493,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d004b
 			public const int SYM = 2131558475;
 			
-			// aapt resource value: 0x7f0d00c1
-			public const int action0 = 2131558593;
+			// aapt resource value: 0x7f0d00c0
+			public const int action0 = 2131558592;
 			
 			// aapt resource value: 0x7f0d0099
 			public const int action_bar = 2131558553;
@@ -3517,17 +3517,17 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0075
 			public const int action_bar_title = 2131558517;
 			
-			// aapt resource value: 0x7f0d00be
-			public const int action_container = 2131558590;
+			// aapt resource value: 0x7f0d00bd
+			public const int action_container = 2131558589;
 			
 			// aapt resource value: 0x7f0d009a
 			public const int action_context_bar = 2131558554;
 			
-			// aapt resource value: 0x7f0d00c5
-			public const int action_divider = 2131558597;
+			// aapt resource value: 0x7f0d00c4
+			public const int action_divider = 2131558596;
 			
-			// aapt resource value: 0x7f0d00bf
-			public const int action_image = 2131558591;
+			// aapt resource value: 0x7f0d00be
+			public const int action_image = 2131558590;
 			
 			// aapt resource value: 0x7f0d0003
 			public const int action_menu_divider = 2131558403;
@@ -3544,11 +3544,11 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0077
 			public const int action_mode_close_button = 2131558519;
 			
-			// aapt resource value: 0x7f0d00c0
-			public const int action_text = 2131558592;
+			// aapt resource value: 0x7f0d00bf
+			public const int action_text = 2131558591;
 			
-			// aapt resource value: 0x7f0d00ce
-			public const int actions = 2131558606;
+			// aapt resource value: 0x7f0d00cd
+			public const int actions = 2131558605;
 			
 			// aapt resource value: 0x7f0d0078
 			public const int activity_chooser_view_content = 2131558520;
@@ -3571,8 +3571,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d004c
 			public const int always = 2131558476;
 			
-			// aapt resource value: 0x7f0d00bc
-			public const int animateButton = 2131558588;
+			// aapt resource value: 0x7f0d00ba
+			public const int animateButton = 2131558586;
 			
 			// aapt resource value: 0x7f0d0071
 			public const int async = 2131558513;
@@ -3607,8 +3607,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d007e
 			public const int buttonPanel = 2131558526;
 			
-			// aapt resource value: 0x7f0d00c2
-			public const int cancel_action = 2131558594;
+			// aapt resource value: 0x7f0d00c1
+			public const int cancel_action = 2131558593;
 			
 			// aapt resource value: 0x7f0d0059
 			public const int center = 2131558489;
@@ -3622,8 +3622,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0092
 			public const int checkbox = 2131558546;
 			
-			// aapt resource value: 0x7f0d00ca
-			public const int chronometer = 2131558602;
+			// aapt resource value: 0x7f0d00c9
+			public const int chronometer = 2131558601;
 			
 			// aapt resource value: 0x7f0d006d
 			public const int clip_horizontal = 2131558509;
@@ -3685,8 +3685,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0044
 			public const int end = 2131558468;
 			
-			// aapt resource value: 0x7f0d00d0
-			public const int end_padder = 2131558608;
+			// aapt resource value: 0x7f0d00cf
+			public const int end_padder = 2131558607;
 			
 			// aapt resource value: 0x7f0d0053
 			public const int enterAlways = 2131558483;
@@ -3721,6 +3721,9 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0073
 			public const int forever = 2131558515;
 			
+			// aapt resource value: 0x7f0d00bb
+			public const int fragment_container = 2131558587;
+			
 			// aapt resource value: 0x7f0d000a
 			public const int ghost_view = 2131558410;
 			
@@ -3739,8 +3742,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d007d
 			public const int icon = 2131558525;
 			
-			// aapt resource value: 0x7f0d00cf
-			public const int icon_group = 2131558607;
+			// aapt resource value: 0x7f0d00ce
+			public const int icon_group = 2131558606;
 			
 			// aapt resource value: 0x7f0d002d
 			public const int icon_only = 2131558445;
@@ -3751,8 +3754,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d007a
 			public const int image = 2131558522;
 			
-			// aapt resource value: 0x7f0d00cb
-			public const int info = 2131558603;
+			// aapt resource value: 0x7f0d00ca
+			public const int info = 2131558602;
 			
 			// aapt resource value: 0x7f0d0074
 			public const int italic = 2131558516;
@@ -3784,14 +3787,14 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d007c
 			public const int list_item = 2131558524;
 			
-			// aapt resource value: 0x7f0d00bd
-			public const int map = 2131558589;
+			// aapt resource value: 0x7f0d00bc
+			public const int map = 2131558588;
 			
-			// aapt resource value: 0x7f0d00d2
-			public const int masked = 2131558610;
+			// aapt resource value: 0x7f0d00d1
+			public const int masked = 2131558609;
 			
-			// aapt resource value: 0x7f0d00c4
-			public const int media_actions = 2131558596;
+			// aapt resource value: 0x7f0d00c3
+			public const int media_actions = 2131558595;
 			
 			// aapt resource value: 0x7f0d00a8
 			public const int message = 2131558568;
@@ -3823,14 +3826,14 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0028
 			public const int normal = 2131558440;
 			
-			// aapt resource value: 0x7f0d00cd
-			public const int notification_background = 2131558605;
-			
-			// aapt resource value: 0x7f0d00c7
-			public const int notification_main_column = 2131558599;
+			// aapt resource value: 0x7f0d00cc
+			public const int notification_background = 2131558604;
 			
 			// aapt resource value: 0x7f0d00c6
-			public const int notification_main_column_container = 2131558598;
+			public const int notification_main_column = 2131558598;
+			
+			// aapt resource value: 0x7f0d00c5
+			public const int notification_main_column_container = 2131558597;
 			
 			// aapt resource value: 0x7f0d006c
 			public const int outline = 2131558508;
@@ -3859,11 +3862,11 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0061
 			public const int right = 2131558497;
 			
-			// aapt resource value: 0x7f0d00cc
-			public const int right_icon = 2131558604;
+			// aapt resource value: 0x7f0d00cb
+			public const int right_icon = 2131558603;
 			
-			// aapt resource value: 0x7f0d00c8
-			public const int right_side = 2131558600;
+			// aapt resource value: 0x7f0d00c7
+			public const int right_side = 2131558599;
 			
 			// aapt resource value: 0x7f0d0029
 			public const int satellite = 2131558441;
@@ -3979,8 +3982,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d0062
 			public const int start = 2131558498;
 			
-			// aapt resource value: 0x7f0d00c3
-			public const int status_bar_latest_event_content = 2131558595;
+			// aapt resource value: 0x7f0d00c2
+			public const int status_bar_latest_event_content = 2131558594;
 			
 			// aapt resource value: 0x7f0d0067
 			public const int stretch = 2131558503;
@@ -4033,8 +4036,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d001a
 			public const int textinput_helper_text = 2131558426;
 			
-			// aapt resource value: 0x7f0d00c9
-			public const int time = 2131558601;
+			// aapt resource value: 0x7f0d00c8
+			public const int time = 2131558600;
 			
 			// aapt resource value: 0x7f0d0023
 			public const int title = 2131558435;
@@ -4084,8 +4087,8 @@ namespace MapsApp.Droid
 			// aapt resource value: 0x7f0d001b
 			public const int view_offset_helper = 2131558427;
 			
-			// aapt resource value: 0x7f0d00d1
-			public const int visible = 2131558609;
+			// aapt resource value: 0x7f0d00d0
+			public const int visible = 2131558608;
 			
 			// aapt resource value: 0x7f0d002f
 			public const int wide = 2131558447;
@@ -4095,12 +4098,6 @@ namespace MapsApp.Droid
 			
 			// aapt resource value: 0x7f0d0042
 			public const int wrap_content = 2131558466;
-			
-			// aapt resource value: 0x7f0d00ba
-			public const int zoomInButton = 2131558586;
-			
-			// aapt resource value: 0x7f0d00bb
-			public const int zoomOutButton = 2131558587;
 			
 			static Id()
 			{

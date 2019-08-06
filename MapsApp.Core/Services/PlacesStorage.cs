@@ -1,4 +1,5 @@
-﻿using MapsApp.Models;
+﻿using MapsApp.Core.Models;
+using MapsApp.Models;
 using MapsApp.Services.Interfaces;
 using MvvmCross.ViewModels;
 using System.Collections.ObjectModel;
@@ -13,7 +14,7 @@ namespace MapsApp.Services
     public class PlacesStorage : MvxNotifyPropertyChanged, IPlacesStorage
     {
         private readonly ISettingsService _settingsService;
-        //private MapSpan _mapSpan;
+        private MapSpan _mapSpan;
         private ObservableCollection<Place> _places = new ObservableCollection<Place>();
 
         public PlacesStorage(ISettingsService settingsService)
@@ -31,11 +32,11 @@ namespace MapsApp.Services
 
         public Task Initialize { get; }
 
-        //public MapSpan MapSpan
-        //{
-        //    get { return _mapSpan; }
-        //    private set { SetProperty(ref _mapSpan, value); }
-        //}
+        public MapSpan MapSpan
+        {
+            get { return _mapSpan; }
+            private set { SetProperty(ref _mapSpan, value); }
+        }
 
         public async Task AddPlaceToCollectionAsync(Place place)
         {
@@ -48,24 +49,22 @@ namespace MapsApp.Services
 
         public async Task UpdateMapSpanForCurrentPointsAsync()
         {
-            var location = await Geolocation.GetLocationAsync();
+            //var location = await Geolocation.GetLocationAsync();
 
             if (Places.Count > 1)
             {
                 var tempPlaces = Places.ToList();
-                tempPlaces.Add(new Place(location.Latitude, location.Longitude));
+                //tempPlaces.Add(new Place(location.Latitude, location.Longitude));
 
-                var minLat = tempPlaces.Min(x => x.Geometry.Location.Latitude);
-                var minLng = tempPlaces.Min(x => x.Geometry.Location.Longitude);
-                var maxLat = tempPlaces.Max(x => x.Geometry.Location.Latitude);
-                var maxLng = tempPlaces.Max(x => x.Geometry.Location.Latitude);
+                var westLat = tempPlaces.Min(x => x.Geometry.Location.Latitude);
+                var southLng = tempPlaces.Min(x => x.Geometry.Location.Longitude);
+                var eastLat = tempPlaces.Max(x => x.Geometry.Location.Latitude);
+                var northLng = tempPlaces.Max(x => x.Geometry.Location.Longitude);
 
-                //var ctrPoosition = new Position((maxLat - minLat) / 2 + minLat, (maxLng - minLng) / 2 + minLng);
-
-                //MapSpan = new MapSpan(ctrPoosition, (maxLat - minLat) / 2 * 1.1, (maxLng - minLng) / 2 * 1.1);
+                MapSpan = new MapSpan(eastLat, westLat, northLng, southLng);
             }
             //else
-                //MapSpan = MapSpan.FromCenterAndRadius(new Position(location.Latitude, location.Longitude), Distance.FromKilometers(20));
+                //MapSpan = new MapSpan(location.Latitude, location.Longitude);
         }
 
         public async Task RemovePlaceFromCollectionAsync(Place place)

@@ -11,7 +11,7 @@
   <string name="activity_label_axml">AXML demo"</string>
   <string name="activity_description_axml">Load the MapFrament in the layout file.</string>
 
-  <string name="activity_label_mapwithmarkers">Markers Demo</string>
+  <string name="activity_label_mapwithmarkers">Maps app</string>
   <string name="activity_description_mapwithmarkers">Shows how to add some markers.</string>
 
   <string name="activity_label_mapwithoverlays">Overlays Demo</string>

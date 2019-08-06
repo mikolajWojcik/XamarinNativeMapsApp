@@ -1,6 +1,7 @@
 ﻿using MapsApp.Models;
 using MapsApp.Services.Interfaces;
 using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using System;
 using System.Collections.ObjectModel;
@@ -12,14 +13,16 @@ namespace MapsApp.ViewModels
 {
 	public class AddressesPageViewModel : MvxViewModel
 	{
+        private readonly IMvxNavigationService _navigationService;
         private readonly IPlacesStorage _storage;
         private MvxObservableCollection<Place> _places;
         private bool _isLableVisible;
         private string _searchText;
         private ICommand _placeSelectedCommand;
 
-        public AddressesPageViewModel(IGooglePlacesService placesService, IPlacesStorage storage) 
+        public AddressesPageViewModel(IMvxNavigationService navigationService, IGooglePlacesService placesService, IPlacesStorage storage) 
         {
+            _navigationService = navigationService;
             PlacesService = placesService;
             _storage = storage;
         }
@@ -68,11 +71,7 @@ namespace MapsApp.ViewModels
         private async void SelectedPlace(Place place)
         {
             await _storage.AddPlaceToCollectionAsync(place);
-
-            //Device.BeginInvokeOnMainThread(async () =>
-            //{
-            //    var result = await NavigationService.GoBackAsync();
-            //});           
+            await _navigationService.Navigate(typeof(MapPageViewModel));       
         }
     }
 }

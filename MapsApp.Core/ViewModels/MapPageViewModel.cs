@@ -1,6 +1,7 @@
 ﻿using MapsApp.Models;
 using MapsApp.Services.Interfaces;
 using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
@@ -15,9 +16,11 @@ namespace MapsApp.ViewModels
         private bool _isInternetAccessible;
         private bool _arePermissionsSatisfied;
         private MvxObservableCollection<Place> _places;
+        private readonly IMvxNavigationService _navigationService;
 
-        public MapPageViewModel(IPlacesStorage placesStorage)
+        public MapPageViewModel(IMvxNavigationService navigationService, IPlacesStorage placesStorage)
         {
+            _navigationService = navigationService;
             PlacesStorage = placesStorage;
             SearchAddressesCommand = new MvxCommand(SearchAddresses, CanNavigateToAddressesPage);
             IsInternetAccessible = Connectivity.NetworkAccess == NetworkAccess.Internet;
@@ -54,7 +57,6 @@ namespace MapsApp.ViewModels
         {
             await base.Initialize();
             await PlacesStorage.Initialize;
-            ArePermissionsSatisfied = await CheckPermissions();
 
             Places = new MvxObservableCollection<Place>(PlacesStorage.Places);
             PlacesStorage.Places.CollectionChanged += (sender, e) =>
@@ -71,48 +73,14 @@ namespace MapsApp.ViewModels
             };
         }
 
-        private async Task<bool> CheckPermissions()
-        {
-            try
-            {
-                var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Location);
-                if (status != PermissionStatus.Granted)
-                {
-                    if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Location))
-                    {
-                        //Device.BeginInvokeOnMainThread(async () =>
-                        //{
-                        //    await _pageDialog.DisplayAlertAsync("Need location", "Application needs information about mobile location to show it on map", "OK");
-                        //});
-                    }
-
-                    var permissionsDictionary = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Location);
-                    status = permissionsDictionary[Permission.Location];
-                }
-
-                return status == PermissionStatus.Granted;
-            }
-            catch (Exception ex)
-            {
-                //Crashes.TrackError(ex);
-                return false;
-            }
-        }
-
         private bool CanNavigateToAddressesPage()
         {
             return Connectivity.NetworkAccess == NetworkAccess.Internet;
         }
 
-        public void SearchAddresses()
+        public async void SearchAddresses()
         {
-            //Device.BeginInvokeOnMainThread( async () =>
-            //{
-            //    var result = await NavigationService.NavigateAsync(nameof(AddressesPage));
-
-            //    if (!result.Success)
-            //        Crashes.TrackError(result.Exception);
-            //});
+            await _navigationService.Navigate(typeof(AddressesPageViewModel));    
         }
     }
 }

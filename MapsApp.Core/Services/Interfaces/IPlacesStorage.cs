@@ -1,10 +1,10 @@
-﻿using MapsApp.Models;
+﻿using MapsApp.Core.Models;
+using MapsApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
-//using Xamarin.Forms.Maps;
 
 namespace MapsApp.Services.Interfaces
 {
@@ -12,7 +12,7 @@ namespace MapsApp.Services.Interfaces
     {
         ObservableCollection<Place> Places { get; }
 
-        //MapSpan MapSpan { get; }
+        MapSpan MapSpan { get; }
 
         Task AddPlaceToCollectionAsync(Place place);
 
