@@ -14,7 +14,7 @@ using MvvmCross.Platforms.Android.Views;
 
 namespace MapsApp.Droid.Views
 {
-    [Activity(Label = "AddressesView", MainLauncher = true)]
+    [Activity(Label = "AddressesView")]
     public class AddressesView : MvxActivity<AddressesPageViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
